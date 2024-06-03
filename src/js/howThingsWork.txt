@@ -1,0 +1,15 @@
+Publisher-subscriber pattern:
+Event should be handled in the controller and should be listened for in th view.
+
+How error handling works:
+The presentation of the error on the UI is done by the view.js
+But it is the controller.js who tells it to do it.
+
+Suppose there is a error in model.js. It will be propagated to controller.js as it will be imported with the other things. Once the error is caught in the controller.js it will be rendered by the view.js
+Same is true for view. If there occurs any error in the view it will firstly go to controller.js which then will be rendered in the view.
+
+data attributes is a way for JS to know about DOM
+
+controller.js have many event handlers which will run when some event happens on the view. It will do some work. If the work requires it to change UI it will pass the work to view and if it involves changing the basic functionality(like state of variables) of the application it will be passed to model.js
+
+Event delgation -> In this we add the eventListener to the parent element and check if the event happen on a certain child of the parentelement.

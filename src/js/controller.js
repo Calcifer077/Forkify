@@ -138,6 +138,10 @@ const controlAddRecipe = async function (newRecipe) {
     addRecipeView.renderError(err.message);
   }
 };
+
+const newFeature = function () {
+  console.log('Welcome to the apk');
+};
 const init = function () {
   // Handling the event which was listened in the view.
   bookmarksView.addHandlerRender(controlBookmarks);
@@ -147,7 +151,7 @@ const init = function () {
   searchView.addHandlerSearch(controlSearchResults);
   paginationView.addHandlerClick(controlPagination);
   addRecipeView.addHandlerUpload(controlAddRecipe);
-  console.log('Welcome!');
+  newFeature();
 };
 
 init();
